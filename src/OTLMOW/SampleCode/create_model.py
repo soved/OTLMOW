@@ -20,5 +20,5 @@ if __name__ == '__main__':
     oef_file_location = '../InputFiles/oef.legacy.json'
     ins_ond_file_location = '../InputFiles/oef.ins.ond.json'
     # otl_facility.init_oef_model_creator(oef_file_location, ins_ond_file_location)
-    otl_facility.create_oef_datamodel()
+    # otl_facility.create_oef_datamodel()
 
