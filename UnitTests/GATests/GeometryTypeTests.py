@@ -15,7 +15,7 @@ from OTLMOW.ModelGenerator.SQLDbReader import SQLDbReader
 class GeometryTypeTests(TestCase):
     def test_GeometryType_Baanlichaam(self):
         base_dir = os.path.dirname(os.path.realpath(__file__))
-        sqlReader = SQLDbReader(f'{base_dir}/../../src/OTLMOW/InputFiles/Geometrie_Artefact_22_PU.db')
+        sqlReader = SQLDbReader(f'{base_dir}/../../src/OTLMOW/InputFiles/Geometrie_Artefact_23.db')
         memory = GeometrieInMemoryCreator(sqlReader)
         geo_collector = GeometrieArtefactCollector(memory)
         geo_collector.collect()
@@ -28,7 +28,6 @@ class GeometryTypeTests(TestCase):
         self.assertEqual(0, geo_type_baanlichaam.punt3D)
         self.assertEqual(0, geo_type_baanlichaam.lijn3D)
         self.assertEqual(1, geo_type_baanlichaam.polygoon3D)
-        self.assertEqual('', geo_type_baanlichaam.gewijzigd_sinds)
 
     def test_InheritanceTest_A_has_concrete_classes_B_C_with_same_geotype(self):
         base_dir = os.path.dirname(os.path.realpath(__file__))
